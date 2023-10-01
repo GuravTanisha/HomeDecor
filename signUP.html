@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <style>
+      /* CSS styles from the previous example remain the same */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 500px;
+        height: 430px;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-group label {
+        display: block;
+        font-weight: bold;
+      }
+      h2 {
+        text-align: center;
+      }
+
+      .form-group input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .form-group button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #btn {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Sign Up</h2>
+      <form id="signup-form">
+        <div class="form-group">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <br />
+        <p align="center">
+          Already have an Account ?<a href="login.html">Login</a>
+        </p>
+
+        <p align="center">
+          <input
+            type="submit"
+            value="Sign Up"
+            id="btn"
+            href="terms.html"
+            onclick="next()"
+          />
+        </p>
+      </form>
+      <div id="error-message" style="color: red"></div>
+    </div>
+
+    <script>
+      document
+        .getElementById("signup-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault(); // Prevent the form from submitting normally
+
+          // Get form values
+          var username = document.getElementById("username").value;
+          var email = document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+
+          // Simple validation
+          if (username.trim() === "") {
+            showError("Username is required.");
+          } else if (email.trim() === "") {
+            showError("Email is required.");
+          } else if (!isValidEmail(email)) {
+            showError("Invalid email address.");
+          } else if (password.trim() === "") {
+            showError("Password is required.");
+          } else {
+            // You can send the data to your server here for further processing
+            alert("Sign-up successful!");
+            clearForm();
+          }
+        });
+      function next() {
+        onclick = window.open("terms.html");
+      }
+
+      function showError(message) {
+        document.getElementById("error-message").textContent = message;
+      }
+
+      function isValidEmail(email) {
+        // Very basic email validation
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function clearForm() {
+        document.getElementById("username").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+        document.getElementById("error-message").textContent = "";
+      }
+    </script>
+  </body>
+</html>

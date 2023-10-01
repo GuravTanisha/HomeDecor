@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Image</title>
+    <link rel="stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="Javascript/script.js"></script>
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.0/dist/Resizeobserver.js"></script>
+    <script src="https://unpkg.com/focus-visible@5.0.2/dist/focus-visible.js" defer></script>
+    <script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
+    
+    <style>
+        .interact.dropzone {
+                width: 350px;
+                height: 350px;
+                transition: background-color 0.5s;
+            }
+            
+            .draggable {
+                align-items: center;
+                justify-content: center;                
+                border-radius: 10px;                
+            }
+             
+    </style>
+
+</head>
+<body>
+    <nav>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-instagram"></a>
+        <a href="#" class="fa fa-youtube"></a>
+
+        <hr>
+        <p>Interior Design</p>
+        <ul>
+            <li><a href="index.html">Home<span></span></a></li>
+            <li><a href="#">Offers<span></span></a></li>
+            <li><a href="#">Photos<span></span></a></li>
+            <li><a href="#">About Us<span></span></a></li>
+            <li><a href="#">Reviews<span></span></a></li>
+            <li><a href="#">Contact Us<span></span></a></li>
+        </ul>
+    </nav>
+    <br>
+    <div class="parent">
+    <section>
+        <h1>Filter Image</h1>
+        <ul>
+            <li class="active">All Menu</li>
+            <li>Sofa</li>
+            <li>Window</li>
+            <li>Table</li>
+            
+        </ul>
+
+        <div class="product">
+
+            <div class="draggable itemA"><model-viewer src="3D Images/sofa/sofa1/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/sofa/sofa2/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+            <div class="draggable itemA"><model-viewer src="3D Images/sofa/sofa3/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/sofa/sofa4/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+            <div class="draggable itemA"><model-viewer src="3D Images/sofa/sofa5/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/sofa/sofa6/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="sofa" ar></model-viewer></div>
+
+            <div class="draggable itemA"><model-viewer src="3D Images/tables/tables1/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/tables/tables2/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+            <div class="draggable itemA"><model-viewer src="3D Images/tables/tables3/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/tables/tables4/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+            <div class="draggable itemA"><model-viewer src="3D Images/tables/tables5/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/tables/tables6/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="table" ar></model-viewer></div>
+
+            <div class="draggable itemA"><model-viewer src="3D Images/windows/windows1/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="window" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/windows/windows2/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="window" ar></model-viewer></div>
+            <div class="draggable itemA"><model-viewer src="3D Images/windows/windows3/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="window" ar></model-viewer></div>
+            <div class="draggable itemB"><model-viewer src="3D Images/windows/windows4/scene.gltf" alt="A 3D model of sofa" shadow-intensity="0" camera-controls data-filter="window" ar></model-viewer></div>
+
+            <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+            <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer.legacy.js"></script>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1>Designing Space : </h1>
+        <img src="Images/background.jpg" alt="This is a empty room interior Image">
+    </div>
+
+</div>
+    
+    
+
+    <script>
+        const liItem = document.querySelectorAll('ul li');
+        const mod = document.querySelectorAll('.product model-viewer');
+
+        liItem.forEach(li => {
+           li.onclick = function() {
+            //active
+            liItem.forEach(li => {
+                li.className = "";
+            })
+            li.className = "active";
+
+            //Filter
+            const value = li.textContent;
+            mod.forEach(mod => {
+                mod.style.display = 'none';
+                if (mod.getAttribute('data-filter') == value.toLowerCase() || value == "All Menu") {
+                    mod.style.display = 'block';
+                }
+            })
+           }
+        });
+    </script>
+</body>
+</html>

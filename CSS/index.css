@@ -1,0 +1,153 @@
+.parent{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: -20px;
+}
+
+
+body,h1,ul,li{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #667d8e;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+section{
+    width: 80%;
+    margin: 50px 5%;
+}
+section h1 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2em;
+}
+section ul{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.57);
+    padding-bottom: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+section ul li{
+    list-style: none;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+section ul li.active{
+    background-color: rgba(41, 255, 41, 0.897);
+}
+.product{
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.product model-viewer {
+    width: 200px;
+    height: 180px;
+    margin-bottom: 2px;
+    touch-action: none;
+    transition: transform 0.5s;
+}
+
+.container{
+    width: 100%;
+    margin: 50px 5%;
+}
+
+.container h1{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 2em;
+}
+
+.container img{
+    width: 90%;
+    padding: 10px 5%;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    
+    background-image: linear-gradient(#033747 , #012733);
+    background-size: cover;
+}
+
+nav p{
+    color: aliceblue;
+    font-weight: bold;
+    font-size: 25px;
+    display: inline;
+}
+
+nav{
+    height: 150px;
+    width: 100%;
+    line-height: 75px;
+    padding: 0px 100px;
+}
+
+nav ul{
+    float: right;
+}
+
+nav ul li{
+    list-style: none;
+    padding: 0px 2px;
+    float: left;
+}
+
+nav a{
+    position: relative;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-decoration: none;
+    color: aliceblue;
+    padding: 6px 15px;
+    transition: .5s;
+}
+
+
+nav a:hover{
+    color: rgb(255, 217, 0);
+}
+
+nav a span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border-bottom: 2px solid rgb(255, 217, 0);
+    border-radius: 15px;
+    transform: scale(0) translateY(50px);
+    opacity: 0;
+    transition: .5s;
+}
+
+nav a:hover span{
+    transform: scale(1) translateY(0);
+    opacity: 1;
+}
+
